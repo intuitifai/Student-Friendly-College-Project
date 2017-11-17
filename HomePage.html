@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Friendly College</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: green ;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+.jumbotron {
+background-image: url("college3.jpg");
+background-size: cover;
+width: auto;
+height: 800px
+
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body background="white2.jpg">
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="HomePage.html"><strong>Student Friendly College </strong></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="AdminLogin.php"><strong>Login as Adminstrator</strong></a></li>
+      <li><a href="#"><strong>Login as Student</strong></a></li>
+    </ul>
+
+
+  </div>
+  </nav>
+  <center><h1>STUDENT FRIENDLY COLLEGE</h1></center>
+  <div class="w3-content w3-display-container">
+  <img class="mySlides" src="college4.jpg" style="width:100%">
+  <img class="mySlides" src="college5.jpg" style="width:100%">
+  <img class="mySlides" src="college6.jpg" style="width:100%">
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+  <button onclick="topFunction()" id="myBtn" title="Either adminstrator or student">Want to Login instead? </button>
+
+<br>
+  <div class="container">
+    <div class="jumbotron1">
+
+    <h1><p><strong>What is this ?</strong></h1></p><p><h3>
+
+Student Friendly College Management System is a web application which provides a very easy way for students to pay the fee and check the results online. This application maintains the complete information about the students their fee details and their results.
+
+We developed a web application where students can pay the fee online and check the results. This application provides a service to students to check their fee dues and pay it online and students can even check the results online.</p>
+
+    <p><strong>Introduction:</strong></p><p>
+
+The main objective of our project is to develop a GUI (Graphical User Interface) which is user friendly. It is fast in operation and databases will be up to date. Every user will have their own profile, where they can know about their fee dues, make fee payment online and check the results.
+</p></h4>
+<p><h1><strong>Survey and Findings:</strong></h1></p><p><h3>
+
+We know the difficulty of paying the college fees, exam fees, etc, in college because there are so many students in the college who want to pay the fee. (Students who can’t pay the fee immediately and has to pay on the last day, due to which long queue is seen everywhere and it is a time taking process.
+
+Students, who appear in the exams, eagerly wait for the results, but the university servers are so busy in the time of the results when they are released and lots of time is being consumed in awaiting of the results for coming days. So, we are developing a system in which a student can pay his/her fee from their profile and even check their results.
+</p>
+</div></div>
+</h3>
+<div class="container">
+  <div class="jumbotron1">
+<strong><h1>Problem with our Existing System: </h1></strong><h3>
+<ul>
+<strong>The main problem with our existing College Management system are:</strong><br><br>
+
+<li>No software for online fee payment system.</li><br>
+<li>Busy university servers while the results are released.</li><br>
+<li>User login profiles are not user friendly.</li><br>
+<li>No online enquiry for fee dues.</li><br>
+<li>There is no predefined classification of fee categories.</li><br>
+<li>Students fee payment data searching is not available, it is not user friendly.</li><br>
+<li>Existing system is total manual process. It is time taking process.</li></h3><br>
+</div>
+</div>
+<div class="container">
+<div class="jumbotron1">
+  <strong><h1>Proposed System:</h1></strong><h3>
+<ul>
+<strong>To overcome all the problems in the existing College Management System, we have proposed a new system with the following actions.</strong><br><br>
+
+<li>A web page has been created with separate logins and profiles with good security for students.</li><br>
+<li>Student can search his/her results as soon as results are announced in their own profiles and they can check their fee dues and can pay that online from their own logins.</li><br>
+<li>Student can choose the fee structure in the way they want to pay and can pay that separately by providing the details based on the method payment they choose.</li><br>
+<li>Student can pay college fee, university fee, exam fee, transport fee, CRT fee, etc,.</li><br>
+<li>An Administrator can check status of students who paid the fee and how much. He can insert the fee details from his login which reflects into students fee dues.</li><br>
+</h3>
+</div>
+</div>
+</body>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</html>
