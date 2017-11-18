@@ -1,6 +1,6 @@
 # Student-Friendly-College-Project
 The DBMS project 
-Hello. This is my College project for DBMS course.The Project includes HTML,JS,CSS,(don't forget the bootstrap). Also it is connected to the backend with MYSQL.
+This is my College project for DBMS course.The Project includes HTML,JS,CSS,(don't forget the bootstrap). Also it is connected to the backend with MYSQL.
 Student Friendly College Management System is a web application which provides a very easy way for students to pay the fee and check the results online. This application maintains the complete information about the students their fee details and their results. We developed a web application where students can pay the fee online and check the results. This application provides a service to students to check their fee dues and pay it online and students can even check the results online.
 [REQUIREMENT]
 You should have MySQL sever running in either of WAMP or XAMPP.
