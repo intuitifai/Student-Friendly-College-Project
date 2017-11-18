@@ -78,7 +78,7 @@ li {
       <button type = "submit" class="btn btn-info btn-lg">LogIn</button>
     </form></center>
   <?php
-
+  error_reporting(0);
   $conn=new mysqli("localhost","root","","Student_Friendly_College");
 	if($conn->connect_error)
 	{

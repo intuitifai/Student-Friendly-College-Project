@@ -69,42 +69,25 @@ li {
       <a class="navbar-brand" href="HomePage.html"><strong>Student Friendly College </strong></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#"><strong>Administrator DashBoard</strong></a></li>
+      <li class="active"><a href="#"><strong>Student DashBoard</strong></a></li>
 
 
     </ul>
     <ul class="nav navbar-nav navbar-right ">
 
-   <li> <a href="AdminLogin.php" class="btn  btn-lg">
+   <li> <a href="StudLog.php" class="btn  btn-lg">
           <span class="glyphicon glyphicon-log-out"></span><strong> Log out
       </strong>  </a></li></ul>
   </div>
 </nav>
 
-<h1><?php echo $_SESSION['login_user']; ?></h1>
-
-
+<center><h1> Welcome <?php  echo $_SESSION["firstname"]." [".$_SESSION["usn"]."] ";?></h1></center>
 <br>
 
 <form class="form_bg">
   <table class="table table-bordered">
-<tr><td><h3>
-        <a href="#">
-          <span class="glyphicon glyphicon-user"></span>
-        </a>
-      <a href ="StudentInfo.php">Create a new Student Record</a></h3></td>
-  <td><h3>
-        <a href="#">
-          <span class="glyphicon glyphicon-file"></span>
-        </a>
-      <a href ="SetMarks.php">Set Student's Marks</a><h3></td>
-  <tr><td>
-    <h3>
-          <a href="#">
-            <span class="glyphicon glyphicon-refresh"></span>
-          </a>
+<tr>
 
-          <a href ="UpdateMarks.php">Update Student's Marks</a></h3></td>
   <td>
     <h3>
           <a href="#">
@@ -112,16 +95,16 @@ li {
           </a>
 
 
-          <a href ="SubmitFee.php">Set Student's Fee</a></h3></td>
-  <tr><td>
+          <a href ="SubmitFee.php">Pay College Fees</a></h3></td>
+  <td>
     <h3>
           <a href="#">
             <span class="glyphicon glyphicon-education"></span>
           </a>
 
 
-
-    <a href ="GetMarks1.php">Get Student's Marks</a></h3></td>
+  <a href ="GetMarks1.php">Get Report Card</a></h3></td>
+<tr>
   <td>
     <h3>
           <a href="#">
@@ -129,7 +112,17 @@ li {
           </a>
 
 
-          <a href ="GetFee1.php">Get Student's Fee Report</a></td>
+          <a href ="GetFee1.php">Fee Reciept</a></td>
+        </h3>
+        <td>
+          <h3>
+                <a href="#">
+                  <span class="glyphicon glyphicon-globe"></span>
+                </a>
+
+
+                <a href ="GetFee1.php">Feedback</a></td>
+              </h3>
 
 </ul>
 </form>
