@@ -13,3 +13,5 @@ Now type URL as localhost/Student Friendly College Management System/HomePage.ht
 
 [Warnings]
 This project will be having frequent updates. So some of the modules my not work correctly.
+Also Feedback module is yet to be made... It wont have any work ... To be modified soon
+
