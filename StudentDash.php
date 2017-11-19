@@ -1,16 +1,30 @@
-<?php
-// Start the session
-session_start();
-?>
+
 <html>
 <head>
   <title>Administrator Dashboard</title>
 </head>
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Feedback Page</title>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Bootstrap core CSS     -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Animation library for notifications   -->
+  <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 <style>
 body::before {
  background: url(white.jpg) no-repeat center center fixed;
@@ -31,7 +45,7 @@ body::before {
 }
 
     .form_bg {
-      background-color: lightgreen;
+      background-color: white;
       padding: 50px;
       margin:auto;
       top:200;
@@ -70,19 +84,17 @@ li {
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#"><strong>Student DashBoard</strong></a></li>
-
+      <li><a href="AdminLogin.php"><strong>Not a Student?Login as ADMIN</strong></a></li>
 
     </ul>
-    <ul class="nav navbar-nav navbar-right ">
 
-   <li> <a href="StudLog.php" class="btn  btn-lg">
-          <span class="glyphicon glyphicon-log-out"></span><strong> Log out
-      </strong>  </a></li></ul>
   </div>
 </nav>
+<?php session_start();
+//echo session_id();
+echo $_SESSION["usn"];
+?>
 
-<center><h1> Welcome <?php  echo $_SESSION["firstname"]." [".$_SESSION["usn"]."] ";?></h1></center>
-<br>
 
 <form class="form_bg">
   <table class="table table-bordered">
@@ -95,7 +107,7 @@ li {
           </a>
 
 
-          <a href ="SubmitFee.php">Pay College Fees</a></h3></td>
+          <a href ="SubmitFeeStudent.php">Pay College Fees</a></h3></td>
   <td>
     <h3>
           <a href="#">
@@ -103,7 +115,7 @@ li {
           </a>
 
 
-  <a href ="GetMarks1.php">Get Report Card</a></h3></td>
+  <a href ="GetMarksByStudent.php">Get Report Card</a></h3></td>
 <tr>
   <td>
     <h3>
@@ -112,7 +124,7 @@ li {
           </a>
 
 
-          <a href ="GetFee1.php">Fee Reciept</a></td>
+          <a href ="GetFeeByStudent.php">Fee Reciept</a></td>
         </h3>
         <td>
           <h3>
@@ -121,7 +133,7 @@ li {
                 </a>
 
 
-                <a href ="GetFee1.php">Feedback</a></td>
+                <a href ="Feedback.php">Feedback</a></td>
               </h3>
 
 </ul>

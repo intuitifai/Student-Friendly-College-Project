@@ -2,7 +2,28 @@
 <head>
   <title>Administrator Login</title>
 </head>
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Feedback Page</title>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Bootstrap core CSS     -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Animation library for notifications   -->
+  <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 <style>
 .navbar{
     background-image:none;
@@ -62,17 +83,12 @@ li {
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#"><strong>Administrator Login</strong></a></li>
-      <li><a href="StudLog.php"><strong>Student Login</strong></a></li>
+      <li><a href="StudentDash.php"><strong>Student's Section</strong></a></li>
     </ul>
   </div>
 </nav>
-
-
-
-
-
 <center>    <form action = "AdminLogin.php" method="post" class="form_bg">
-  <h1>Administrator Login<h1><br>
+  <h3>Administrator Login<h3><br>
       <h3><input type = "text" name = "adminName" autocomplete="admin" autofocus required placeholder="Username" class="form-control"></input><br><br>
       <input type = "password" name="adminPass" autocomplete="abcd" autofocus required placeholder="Password" class="form-control"></input><br></h3>
       <button type = "submit" class="btn btn-info btn-lg">LogIn</button>
@@ -90,7 +106,7 @@ li {
     echo "<script> var r=confirm('You are successfully logged in'); if(r==true){window.location='AdminDash.html';}</script>";
   }
   else{
-    echo "<script> window.alert('Please Enter your AmLogin Details')</script>";
+    echo "<script> window.alert('Please Enter your Login Details')</script>";
   }
 
   ?>

@@ -1,9 +1,6 @@
-<?php
-session_start();
-?>
 <html>
 <head>
-  <title>Student Login</title>
+  <title>Administrator Login</title>
 </head>
 <link rel="stylesheet" type="text/css" href="bootstrap.css">
 <style>
@@ -26,7 +23,7 @@ body::before {
 }
 
     .form_bg {
-      background-color:lightgreen;
+      background-color:white;
       padding: 10px;
       margin:auto;
       top:0;
@@ -64,50 +61,28 @@ li {
       <a class="navbar-brand" href="HomePage.html"><strong>Student Friendly College </strong></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="AdminLogin.php"><strong>Administrator Login</strong></a></li>
+      <li><a href="#"><strong>Administrator Login</strong></a></li>
       <li class="active"><a href="StudLog.php"><strong>Student Login</strong></a></li>
     </ul>
   </div>
 </nav>
-
-
-
-
-
 <center>    <form action = "StudentDash.php" method="post" class="form_bg">
-  <h1>Student Login<h1><br>
-      <h3><input type = "text" name = "USN" autocomplete="admin" autofocus required placeholder="Username" class="form-control"></input><br><br>
-      <input type = "password" name="adminPass" autocomplete="abcd" autofocus required placeholder="Password" class="form-control"></input><br></h3>
+  <h1>Administrator Login<h1><br>
+      <h3><input type = "text" name = "USN"  autofocus required placeholder="Username" class="form-control"></input><br><br>
+      <input type = "password" name="adminPass"  autofocus required placeholder="Password" class="form-control"></input><br></h3>
       <button type = "submit" class="btn btn-info btn-lg">LogIn</button>
     </form></center>
   <?php
-  //error_reporting(0);
+  error_reporting(0);
+  session_start();
   $conn=new mysqli("localhost","root","","Student_Friendly_College");
 	if($conn->connect_error)
 	{
 		die("connection failed".$conn->connect_error);
 	}
   $_SESSION["usn"]=$_POST["USN"];
-  //echo $_SESSION["usn"];
-  $sql="select  FirstName from Student_Info where USN = '".$_POST["USN"]."';";
-  $res=$conn->query($sql);
-  if($res->num_rows>0){
-    while($row=$res->fetch_assoc()){
-  $_SESSION["firstname"]=$row["FirstName"];
-  }
-  }
-  $sql2="select  LastName from Student_Info where USN = '".$_POST["USN"]."';";
-  $res2=$conn->query($sql2);
-  if($res2->num_rows>0){
-    while($row=$res2->fetch_assoc()){
-  $_SESSION["lastname"]=$row["LastName"];
-  }
-  }
-
-
-  else{
-    echo "<script> window.alert('Please Enter your AmLogin Details')</script>";
-  }
+  $sql="select  * from Student_Info where USN = '".$_POST["USN"]."';";
+$res=$conn->query($sql);
 
   ?>
 </body>

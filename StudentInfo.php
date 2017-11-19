@@ -2,12 +2,29 @@
 <head>
   <title>Student's Information</title>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<meta charset="utf-8" />
+<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Feedback Page</title>
+
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+
+  <!-- Bootstrap core CSS     -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Animation library for notifications   -->
+  <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+  <!--  Light Bootstrap Table core CSS    -->
+  <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+  <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 <style>
 body::before {
  background: url(college4.jpg) no-repeat center center fixed;
@@ -70,13 +87,13 @@ li {
     <ul class="nav navbar-nav navbar-right ">
 
    <li> <a href="AdminLogin.php" class="btn  btn-lg">
-          <span class="glyphicon glyphicon-log-out"></span><strong> Log out
-        </strong></a></li></ul>
+        <strong> Log out
+      </strong>  </a></li></ul>
   </div>
 </nav>
 <center>
   <form action="StudentInfo.php" method="POST" class ="form_bg">
-    <h1>Student Information</h1>
+    <h3>Student Information</h3>
     <input class="form-control" type="text" name="USN" placeholder="USN" required></input><br>
     <input class ="form-control" type="text" name="FirstName" placeholder="First Name"required></input><br>
     <input class="form-control" type="text" name="LastName" placeholder="Last Name" required></input><br>
